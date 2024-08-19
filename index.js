@@ -26,8 +26,9 @@ if (pin_input.pinInput === pin) { //checking if pin is correct
         let withdraw_ip = await inquirer.prompt([
             {
                 name: "withdraw_amount",
-                type: "number",
-                message: "Enter amount to withdraw:  ",
+                message: "Choose the amount to withdraw:  ",
+                type: "list",
+                choices: [1000, 5000, 10000, 15000]
             },
         ]);
         my_balance -= withdraw_ip.withdraw_amount;
